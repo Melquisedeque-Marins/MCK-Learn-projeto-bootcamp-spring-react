@@ -74,6 +74,10 @@ public abstract class Lesson implements Serializable {
         this.section = section;
     }
 
+    public List<Deliver> getDeliveries() {
+        return deliveries;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
