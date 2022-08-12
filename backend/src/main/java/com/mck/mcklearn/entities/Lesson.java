@@ -15,6 +15,9 @@ public abstract class Lesson implements Serializable {
     private String title;
     private Integer position;
 
+    @OneToMany(mappedBy = "lesson")
+    private List<Deliver> deliveries = new ArrayList<>();
+
     @ManyToOne
     @JoinColumn(name = "section_id")
     private Section section;
