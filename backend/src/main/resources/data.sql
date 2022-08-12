@@ -25,3 +25,6 @@ INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) 
 INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Capitulo 1', 'Primeiros passos na programação', 1, 'https://www.formabase.com/2017/wp-content/uploads/2021/10/frontend-react-developer-1600x600-1-640x640.png', 1, null);
 INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Capitulo 2', 'Lógica de programação', 2, 'https://www.formabase.com/2017/wp-content/uploads/2021/10/frontend-react-developer-1600x600-1-640x640.png', 1, 1);
 INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Capitulo 3', 'Variaveis e constantes', 3, 'https://www.formabase.com/2017/wp-content/uploads/2021/10/frontend-react-developer-1600x600-1-640x640.png', 1, 2);
+
+INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_moment, available, only_Update) VALUES (1, 1, TIMESTAMP WITH TIME ZONE '2022-10-20T13:00:00Z', null, true, false);
+INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_moment, available, only_Update) VALUES (2, 2, TIMESTAMP WITH TIME ZONE '2022-10-20T13:00:00Z', null, true, false);
