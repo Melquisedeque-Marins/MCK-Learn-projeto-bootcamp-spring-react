@@ -9,6 +9,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -18,12 +19,16 @@ public class UserService implements UserDetailsService {
     @Autowired
     private UserRepository repository;
 
+    @Autowired
+    private AuthService authService;
+
+    @Transactional(readOnly = true)
     public UserDTO findById(Long id){
+        authService.validateSelfOrAdmin(id);
         Optional<User> opt = repository.findById(id);
         User user = opt.orElseThrow(() -> new ResourceNotFoundException("Resource not fount for id " + id));
         return new UserDTO(user);
     }
-
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
