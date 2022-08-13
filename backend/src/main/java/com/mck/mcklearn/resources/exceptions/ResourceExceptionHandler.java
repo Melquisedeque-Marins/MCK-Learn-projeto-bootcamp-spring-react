@@ -1,10 +1,10 @@
 package com.mck.mcklearn.resources.exceptions;
 
 
-import com.mck.mcklearn.servicies.exceptions.DatabaseException;
-import com.mck.mcklearn.servicies.exceptions.ForbiddenException;
-import com.mck.mcklearn.servicies.exceptions.ResourceNotFoundException;
-import com.mck.mcklearn.servicies.exceptions.UnauthorizedException;
+import com.mck.mcklearn.services.exceptions.DatabaseException;
+import com.mck.mcklearn.services.exceptions.ForbiddenException;
+import com.mck.mcklearn.services.exceptions.ResourceNotFoundException;
+import com.mck.mcklearn.services.exceptions.UnauthorizedException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;

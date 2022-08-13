@@ -1,9 +1,9 @@
-package com.mck.mcklearn.servicies;
+package com.mck.mcklearn.services;
 
 import com.mck.mcklearn.dto.UserDTO;
 import com.mck.mcklearn.entities.User;
 import com.mck.mcklearn.repositories.UserRepository;
-import com.mck.mcklearn.servicies.exceptions.ResourceNotFoundException;
+import com.mck.mcklearn.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

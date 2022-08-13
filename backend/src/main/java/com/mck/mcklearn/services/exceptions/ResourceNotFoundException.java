@@ -1,4 +1,4 @@
-package com.mck.mcklearn.servicies.exceptions;
+package com.mck.mcklearn.services.exceptions;
 
 public class ResourceNotFoundException extends RuntimeException {
     private static final long serialVersionUID = 1L;

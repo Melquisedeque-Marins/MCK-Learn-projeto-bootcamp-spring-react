@@ -1,16 +1,13 @@
-package com.mck.mcklearn.servicies;
+package com.mck.mcklearn.services;
 
 import com.mck.mcklearn.entities.User;
 import com.mck.mcklearn.repositories.UserRepository;
-import com.mck.mcklearn.servicies.exceptions.ForbiddenException;
-import com.mck.mcklearn.servicies.exceptions.UnauthorizedException;
+import com.mck.mcklearn.services.exceptions.ForbiddenException;
+import com.mck.mcklearn.services.exceptions.UnauthorizedException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.security.Security;
-import java.util.Optional;
 
 @Service
 public class AuthService {

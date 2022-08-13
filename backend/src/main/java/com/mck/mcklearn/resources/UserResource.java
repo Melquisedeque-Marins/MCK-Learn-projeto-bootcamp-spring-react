@@ -1,7 +1,7 @@
 package com.mck.mcklearn.resources;
 
 import com.mck.mcklearn.dto.UserDTO;
-import com.mck.mcklearn.servicies.UserService;
+import com.mck.mcklearn.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
