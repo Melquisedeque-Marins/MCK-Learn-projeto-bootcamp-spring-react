@@ -1,16 +1,29 @@
 package com.mck.mcklearn.servicies;
 
+import com.mck.mcklearn.dto.UserDTO;
 import com.mck.mcklearn.entities.User;
 import com.mck.mcklearn.repositories.UserRepository;
+import com.mck.mcklearn.servicies.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
+@Service
 public class UserService implements UserDetailsService {
 
     @Autowired
     private UserRepository repository;
+
+    public UserDTO findById(Long id){
+        Optional<User> opt = repository.findById(id);
+        User user = opt.orElseThrow(() -> new ResourceNotFoundException("Resource not fount for id " + id));
+        return new UserDTO(user);
+    }
+
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
